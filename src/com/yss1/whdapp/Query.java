@@ -59,9 +59,7 @@ public class Query {
 
 
 			while (rs.next()) {
-				//if (!rs.getString(14).contains("тказ"))
 				aquery.add(new SqlData(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4),rs.getDate(5).toString()));
-				//System.out.println(rs.getString(1)+":"+rs.getString(2)+":"+rs.getString(3)+":"+rs.getString(4)+":"+rs.getDate(5));
 			}
 			rs.close();
 			stmt.close();
