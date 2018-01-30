@@ -12,7 +12,8 @@
          <top>
             <TableView fx:id="main_table" prefHeight="481.0" prefWidth="800.0" BorderPane.alignment="CENTER">
               <columns>
-                <TableColumn fx:id="c1" editable="false" prefWidth="100.0" sortable="false" text="SNILS" />
+                  <TableColumn fx:id="c6" editable="false" prefWidth="246.0" sortable="false" text="FIO" />
+                <TableColumn fx:id="c1" editable="false" prefWidth="127.0" sortable="false" text="SNILS" />
                   <TableColumn fx:id="c2" editable="false" prefWidth="50.0" sortable="false" text="numb" />
                   <TableColumn fx:id="c3" editable="false" prefWidth="50.0" sortable="false" text="dtyp" />
                   <TableColumn fx:id="c4" editable="false" prefWidth="50.0" sortable="false" text="dpns" />

@@ -1,4 +1,4 @@
-package com.yss1.whdapp;
+﻿package com.yss1.whdapp;
 
 import java.util.Collection;
 import java.util.Iterator;
@@ -47,10 +47,13 @@ public class TableController {
 
     @FXML
     private TableColumn<SqlData,String> c5;
-
+    
+    @FXML
+    private TableColumn<SqlData,String> c6;
 
     @FXML
     private void initialize() {
+    	c6.setCellValueFactory(new PropertyValueFactory<>("FIO"));
         c1.setCellValueFactory(new PropertyValueFactory<>("SNILS"));
         c2.setCellValueFactory(new PropertyValueFactory<>("Numb"));
         c3.setCellValueFactory(new PropertyValueFactory<>("dtyp"));

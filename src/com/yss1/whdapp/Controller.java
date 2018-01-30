@@ -1,4 +1,4 @@
-package com.yss1.whdapp;
+ï»¿package com.yss1.whdapp;
 
 import java.io.IOException;
 import java.util.concurrent.Executors;
@@ -91,7 +91,7 @@ public class Controller {
     	if (mw.qr.getAquery().size()<1)
     	{
     		//warn.setText(snils.getText().replaceAll("[\\s,-]","").trim().substring(0,9));
-    		warn.setText("Ïî ÑÍÈËÑ "+snils.getText()+" íåò äàííûõ.");
+    		warn.setText("ÐŸÐ¾ Ð¡ÐÐ˜Ð›Ð¡ "+snils.getText()+" Ð½ÐµÑ‚ Ð´Ð°Ð½Ð½Ñ‹Ñ….");
     		//progress.setVisible(false);
     		return;
     	}

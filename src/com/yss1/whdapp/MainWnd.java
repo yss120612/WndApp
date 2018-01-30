@@ -1,20 +1,9 @@
-package com.yss1.whdapp;
+﻿package com.yss1.whdapp;
 import javafx.application.*;
-import javafx.event.*;
 import javafx.fxml.FXMLLoader;
-import javafx.geometry.Insets;
-import javafx.geometry.Pos;
 import javafx.scene.*;
-import javafx.scene.control.*;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.*;
-
-import java.net.URL;
-import java.sql.*;
-
-
-
-import com.ibm.as400.access.*;
 
 
 public class MainWnd extends Application{

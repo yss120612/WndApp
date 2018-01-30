@@ -1,4 +1,4 @@
-package com.yss1.whdapp;
+п»їpackage com.yss1.whdapp;
 
 import java.util.ArrayList;
 import java.io.BufferedReader;
@@ -39,9 +39,9 @@ public class Query {
 
 		}
 		
-		if (sec.size()!=5)
+		if (sec.size()!=7)
 		{
-			throw new NullPointerException("недостаточно параметров в файле main.pass");
+			throw new NullPointerException("РЅРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РїР°СЂР°РјРµС‚СЂРѕРІ РІ С„Р°Р№Р»Рµ main.pass");
 		}
 	}
 
@@ -54,15 +54,24 @@ public class Query {
 			Statement stmt = con.createStatement();
 			stmt.execute(sec.get(3) + inp + "/')");
 			ResultSet rs = stmt.executeQuery("SELECT * " + sec.get(4));
-			ResultSetMetaData md = rs.getMetaData();
+			
+			Statement stmt1 = con.createStatement();
+			stmt1.execute(sec.get(5) + inp + "/')");
+			ResultSet rs1 = stmt1.executeQuery("SELECT * " + sec.get(6));
+			String fio="";
+			while (rs1.next()) {
+				fio=rs1.getString("fio");
+			}
 			
 
 
 			while (rs.next()) {
-				aquery.add(new SqlData(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4),rs.getDate(5).toString()));
+				aquery.add(new SqlData(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4),rs.getDate(5).toString(),fio));
 			}
 			rs.close();
 			stmt.close();
+			rs1.close();
+			stmt1.close();
 
 		} catch (Exception e) {
 			System.out.println("\nERROR:++ " + e.getMessage());

@@ -1,4 +1,4 @@
-package com.yss1.whdapp;
+﻿package com.yss1.whdapp;
 
 
 import java.util.Calendar;
@@ -6,7 +6,7 @@ import java.util.GregorianCalendar;
 
 public class SqlData {
 	
-public SqlData(String p1,String p2,String p3,String p4,String p5){
+public SqlData(String p1,String p2,String p3,String p4,String p5,String p6){
 String [] dt= p5.split("[-,\\.]");
 //p_date= new GregorianCalendar(Integer.parseInt(dt[2]),Integer.parseInt(dt[1])-1,Integer.parseInt(dt[0]));
 //System.out.println(p_date.get());
@@ -15,7 +15,7 @@ na_date=new GregorianCalendar(Integer.parseInt(dt[0]),Integer.parseInt(dt[1])-1,
 //System.out.println(p5);
 
 SNILS=p1.replaceAll("\\s{2,}"," ").trim();
-//FIO=p3.trim();
+FIO=p6.trim();
 numb=p2;
 dtyp=p3;
 dpns=p4;
@@ -34,9 +34,9 @@ public String getSNILS() {
 }
 
 
-//public String getFIO() {
-//	return FIO;
-//}
+public String getFIO() {
+	return FIO;
+}
 
 public String getDtyp() {
 	return dtyp;
@@ -49,7 +49,7 @@ public String getDpns() {
 //public String getDcor() {
 //	return dcor;
 //}
-//public String FIO;
+public String FIO;
 public String dtyp;
 public String dpns;
 //public String dcor;
